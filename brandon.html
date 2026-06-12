@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Strokes</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(180deg,#0d0d0d,#171717,#0d0d0d);
+            color:#f5f5f5;
+            line-height:1.8;
+        }
+
+        header{
+            height:60vh;
+            background:
+            linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+            url("img/the-strokes.jpg");
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .overlay h1{
+            font-size:5rem;
+            letter-spacing:5px;
+            text-transform:uppercase;
+            color:#ffffff;
+            text-shadow:0 0 20px rgba(255,255,255,.3);
+        }
+
+        .overlay p{
+            font-size:1.2rem;
+            color:#c0c0c0;
+        }
+
+        section{
+            max-width:1100px;
+            margin:auto;
+            padding:50px 25px;
+        }
+
+        h2{
+            color:#d72638;
+            margin-bottom:15px;
+            border-left:5px solid #d72638;
+            padding-left:12px;
+            text-transform:uppercase;
+            letter-spacing:2px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            border:1px solid rgba(255,255,255,0.08);
+            border-radius:15px;
+            padding:25px;
+            margin-bottom:25px;
+            transition:.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 10px 25px rgba(215,38,56,.2);
+        }
+
+        .albums{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .album{
+            background:#1b1b1b;
+            border:1px solid #2e2e2e;
+            border-radius:15px;
+            padding:25px;
+            text-align:center;
+            transition:.3s;
+        }
+
+        .album:hover{
+            transform:scale(1.04);
+            border-color:#d72638;
+        }
+
+        .album h3{
+            color:#d72638;
+            margin-bottom:10px;
+        }
+
+        .album p{
+            color:#bdbdbd;
+        }
+
+        ul{
+            padding-left:25px;
+        }
+
+        li{
+            margin-bottom:8px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:14px 28px;
+            background:#d72638;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#ff3045;
+            transform:translateY(-2px);
+        }
+
+        footer{
+            text-align:center;
+            padding:25px;
+            background:#080808;
+            border-top:1px solid #222;
+            color:#888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="overlay">
+        <h1>The Strokes</h1>
+    </div>
+</header>
+
+<section>
+    <div class="card">
+        <h2>¿Quiénes son?</h2>
+        <p>
+            The Strokes es una banda de rock originaria de Nueva York,
+            formada en 1998. Son considerados uno de los grupos más
+            importantes del movimiento Garage Rock Revival de principios
+            de los años 2000.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Integrantes</h2>
+        <ul>
+            <li>Julian Casablancas – Voz principal</li>
+            <li>Nick Valensi – Guitarra</li>
+            <li>Albert Hammond Jr. – Guitarra</li>
+            <li>Nikolai Fraiture – Bajo</li>
+            <li>Fabrizio Moretti – Batería</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Historia</h2>
+        <p>
+            La banda alcanzó fama internacional con su álbum debut
+            "Is This It" en 2001. Su sonido fresco, inspirado en el rock
+            alternativo y garage rock, influyó en numerosas bandas de la
+            década de los 2000.
+        </p>
+    </div>
+
+    <h2>Álbumes Destacados</h2>
+
+    <div class="albums">
+        <div class="album">
+            <h3>Is This It</h3>
+            <p>2001</p>
+        </div>
+
+        <div class="album">
+            <h3>Room on Fire</h3>
+            <p>2003</p>
+        </div>
+
+        <div class="album">
+            <h3>First Impressions of Earth</h3>
+            <p>2006</p>
+        </div>
+
+        <div class="album">
+            <h3>The New Abnormal</h3>
+            <p>2020</p>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:30px;">
+        <h2>Canciones Populares</h2>
+        <ul>
+            <li>Last Nite</li>
+            <li>Someday</li>
+            <li>Reptilia</li>
+            <li>You Only Live Once</li>
+            <li>The Adults Are Talking</li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="btn">Volver al Inicio</a>
+</section>
+
+
+</body>
+</html>
