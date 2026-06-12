@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Difícil de Explicar - Página sobre Música</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg, #121212, #1e1e1e);
+            color:white;
+            min-height:100vh;
+        }
+
+        header{
+            text-align:center;
+            padding:50px 20px;
+        }
+
+        header h1{
+            font-size:3rem;
+            margin-bottom:10px;
+        }
+
+        header p{
+            color:#cfcfcf;
+            font-size:1.1rem;
+        }
+
+        .container{
+            max-width:1200px;
+            margin:auto;
+            padding:20px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#252525;
+            border-radius:15px;
+            padding:25px;
+            text-align:center;
+            transition:0.3s;
+            box-shadow:0 4px 10px rgba(0,0,0,.3);
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+            box-shadow:0 8px 20px rgba(0,0,0,.5);
+        }
+
+        .card h2{
+            margin-bottom:10px;
+        }
+
+        .card p{
+            color:#bdbdbd;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            background:#ff4d4d;
+            color:white;
+            padding:10px 20px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#ff3030;
+        }
+
+        footer{
+            text-align:center;
+            margin-top:50px;
+            padding:20px;
+            color:#999;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Difícil de Explicar</h1>
+        <p>Proyecto colaborativo sobre música</p>
+    </header>
+
+    <div class="container">
+        <div class="cards">
+
+            <div class="card">
+                <h2>Martín</h2>
+                <p></p>
+                <a href="martin.html" class="btn">Ver página</a>
+            </div>
+
+            <div class="card">
+                <h2>Ángel</h2>
+                <p></p>
+                <a href="angel.html" class="btn">Ver página</a>
+            </div>
+
+            <div class="card">
+                <h2>Pablo</h2>
+                <p></p>
+                <a href="pablo.html" class="btn">Ver página</a>
+            </div>
+
+            <div class="card">
+                <h2>Brandon</h2>
+                <p>The Strokes</p>
+                <a href="brandon.html" class="btn">Ver página</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
