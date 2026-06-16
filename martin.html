@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRUENO | El Último Representante del Barrio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0b0b;
+    --card:#171717;
+    --gold:#f6c90e;
+    --text:#ffffff;
+    --gray:#bdbdbd;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(246,201,14,.08), transparent 30%),
+        radial-gradient(circle at 80% 60%, rgba(246,201,14,.08), transparent 30%);
+    z-index:-1;
+}
+
+/* NAV */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:20px 8%;
+    backdrop-filter:blur(15px);
+    background:rgba(0,0,0,.55);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:900;
+    color:var(--gold);
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px;
+    background:
+        linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.8)),
+    url("./img/Redbull.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:clamp(4rem,10vw,8rem);
+    font-weight:900;
+    color:var(--gold);
+    letter-spacing:4px;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:1.3rem;
+    color:#ddd;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 35px;
+    background:var(--gold);
+    color:black;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* SECTION */
+
+section{
+    width:min(1200px,90%);
+    margin:auto;
+    padding:90px 0;
+}
+
+.section-title{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:var(--gold);
+}
+
+.section-sub{
+    color:var(--gray);
+    margin-bottom:40px;
+}
+
+/* BIO */
+
+.bio{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.bio img{
+    width:100%;
+    border-radius:25px;
+}
+
+.bio-text p{
+    color:#d8d8d8;
+    line-height:1.8;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.stat{
+    background:var(--card);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid #2a2a2a;
+}
+
+.stat h3{
+    font-size:2rem;
+    color:var(--gold);
+}
+
+/* SONGS */
+
+.songs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.song{
+    background:var(--card);
+    border-radius:20px;
+    padding:30px;
+    transition:.35s;
+    border:1px solid #262626;
+}
+
+.song:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(246,201,14,.15);
+}
+
+.song-number{
+    font-size:2rem;
+    font-weight:900;
+    color:var(--gold);
+}
+
+.song h3{
+    margin-top:15px;
+    margin-bottom:10px;
+}
+
+.song p{
+    color:#c7c7c7;
+}
+
+/* SPOTIFY */
+
+.spotify{
+    background:var(--card);
+    padding:30px;
+    border-radius:25px;
+}
+
+.spotify iframe{
+    width:100%;
+    border:none;
+}
+
+/* ALBUMS */
+
+.albums{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.album{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+}
+
+.album h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:60px;
+    text-align:center;
+    padding:40px;
+    background:#050505;
+    color:#888;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:20px;
+}
+
+.socials a{
+    color:white;
+    text-decoration:none;
+}
+
+.socials a:hover{
+    color:var(--gold);
+}
+
+@media(max-width:900px){
+
+    .bio{
+        grid-template-columns:1fr;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .section-title{
+        font-size:2.2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">TRUENO</div>
+
+    <ul>
+        <li><a href="#bio">Biografía</a></li>
+        <li><a href="#hits">Hits</a></li>
+        <li><a href="#spotify">Spotify</a></li>
+        <li><a href="#albums">Álbumes</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>TRUENO</h1>
+
+        <p>
+            Rap argentino • Freestyle • Hip Hop Latino
+        </p>
+
+        <a href="#spotify" class="hero-btn">
+            Escuchar Ahora
+        </a>
+    </div>
+</header>
+
+<section id="bio">
+
+    <h2 class="section-title">El Fenómeno Argentino</h2>
+
+    <div class="bio">
+
+        <img
+        src="img/portada.png"
+        alt="Trueno">
+
+        <div class="bio-text">
+
+            <p>
+                Mateo Palacios Corazzina, conocido mundialmente como Trueno,
+                es una de las figuras más importantes del rap latinoamericano.
+                Tras destacar en las batallas de freestyle, construyó una
+                carrera musical que lo llevó a llenar estadios y acumular
+                cientos de millones de reproducciones.
+            </p>
+
+            <br>
+
+            <p>
+                Su música mezcla rap, hip hop, sonidos urbanos y raíces
+                latinoamericanas, representando la cultura de barrio y la
+                identidad argentina en escenarios de todo el mundo.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3>+20M</h3>
+            <p>Oyentes mensuales</p>
+        </div>
+
+        <div class="stat">
+            <h3>+2B</h3>
+            <p>Reproducciones</p>
+        </div>
+
+        <div class="stat">
+            <h3>100+</h3>
+            <p>Shows internacionales</p>
+        </div>
+
+        <div class="stat">
+            <h3>🇦🇷</h3>
+            <p>Orgullo argentino</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="hits">
+
+    <h2 class="section-title">Canciones Más Populares</h2>
+
+    <p class="section-sub">
+        Algunos de los mayores éxitos de Trueno.
+    </p>
+
+    <div class="songs">
+
+        <div class="song">
+            <div class="song-number">01</div>
+            <h3>Dance Crip</h3>
+            <p>Uno de los temas más reconocidos de su carrera.</p>
+        </div>
+
+        <div class="song">
+            <div class="song-number">02</div>
+            <h3>Mamichula</h3>
+            <p>Hit internacional con millones de reproducciones.</p>
+        </div>
+
+        <div class="song">
+            <div class="song-number">03</div>
+            <h3>Argentina</h3>
+            <p>Homenaje musical a sus raíces.</p>
+        </div>
+
+        <div class="song">
+            <div class="song-number">04</div>
+            <h3>Feel Me??</h3>
+            <p>Rap moderno con identidad propia.</p>
+        </div>
+
+        <div class="song">
+            <div class="song-number">05</div>
+            <h3>Rain III</h3>
+            <p>Colaboración icónica del rap latino.</p>
+        </div>
+
+        <div class="song">
+            <div class="song-number">06</div>
+            <h3>Tranky Funky</h3>
+            <p>Uno de los favoritos de sus seguidores.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="spotify">
+
+    <h2 class="section-title">Escucha a Trueno</h2>
+
+    <div class="spotify">
+
+        <iframe
+            src="https://open.spotify.com/embed/artist/1vAftWKXJtnF53YRu3s0VQ?utm_source=generator"
+            height="380"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+        </iframe>
+
+    </div>
+
+</section>
+
+<section id="albums">
+
+    <h2 class="section-title">Discografía</h2>
+
+    <div class="albums">
+
+        <div class="album">
+            <h3>Atrevido</h3>
+            <p>2020</p>
+        </div>
+
+        <div class="album">
+            <h3>Bien o Mal</h3>
+            <p>2022</p>
+        </div>
+
+        <div class="album">
+            <h3>El Último Baile</h3>
+            <p>2024</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>TRUENO</h3>
+
+    <div class="socials">
+        <a href="https://www.instagram.com/trueno" target="_blank">Instagram</a>
+        <a href="https://open.spotify.com/artist/1vAftWKXJtnF53YRu3s0VQ" target="_blank">Spotify</a>
+        <a href="https://www.youtube.com/@TruenoOficial" target="_blank">YouTube</a>
+    </div>
+
+    <p style="margin-top:20px;">
+        Página fan creada únicamente con HTML y CSS.
+    </p>
+
+</footer>
+
+</body>
+</html>
